@@ -1,0 +1,315 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        /* --------------------------darkmode---------------------- */
+         body{
+            background-color: rgb(243, 243, 243);
+         }
+        #headone{
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            padding: 20px;
+
+        }
+        .d{
+            width: 100%;
+            text-align: center;
+            /* height: 90vh; */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1{
+            font-family: sans-serif;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+        }
+
+        button{
+            padding: 17px 34px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 20px;
+            margin: 10px;
+
+        }
+        button:hover{
+            background-color: rgb(200, 0, 0);
+            transform: scale(1.1);
+            transition: 1s;
+
+        }
+        
+        .h1{
+            color: orangered;
+            background-color: black;
+
+        }
+
+        .border{
+            border-bottom: 2px solid black;
+            padding-top: 20px;
+            
+            
+        }
+
+        /* -----------------------counter------------------ */
+        #headtwo{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        #number{
+            text-align: center;
+            font-size: 40px;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+           
+        }
+
+        .btn button{
+            padding: 15px 30px;
+        }
+
+        /* -----------------------calculator----------------------- */
+
+
+       
+        #call{
+            border: 1px solid black;
+            text-align: center;
+            width: 18%;
+            background-color: grey;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px black;
+            float: left;
+            margin-top: 50px;
+            margin-left: 100px;
+            
+        }
+        input{
+            padding: 10px 15px;
+            margin: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 100px;
+            border: none;
+            background-color: rgb(192, 192, 192);
+            color: rgb(83, 83, 83);
+            box-shadow: 2px 2px 2px black;
+            font-size: 15px;
+            font-weight:500;
+
+        }
+        input:hover{
+            background-color: rgb(172, 170, 170);
+        }
+        .cal{
+            border: 1px solid black;
+            background-color: white;
+        }
+        /* ----------------------------------fan------------------------------ */
+
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .main_2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #btn, #btn_1, #btn_2 , #btn_3 {
+            text-align: center;
+            background-color:rgba(178, 190, 181, 0.623);
+            color: black;
+            width: 70px;
+            height: 40px;
+             
+        }
+        .start_fan{
+            animation: ani 1.3s infinite linear;
+        }
+
+        @keyframes ani {
+            100%{
+                transform : rotate(360deg)
+            }
+        }
+        .fast_fan{
+            animation: ani 0.8s infinite linear;
+        }
+        .faster_fan{
+            animation: ani 0.4s infinite linear;
+        }
+         
+    </style>
+    </style>
+</head>
+<body>
+    <header id="headone">JAVASCRIPT</header>
+
+    <!-- -------------------darkmode-------------------- -->
+
+    <div class="d">
+        <h1>THIS IS DARK MODE </h1>
+        <button onclick="ab()">CLICK</button>
+    </div>
+
+    <div class="border"></div>
+    <!-- ------------------------counter------------------------- -->
+     <h1 id="headtwo">COUNTER</h1>
+    <h2 id="number">0</h2>
+
+    <div class="btn">
+        <button onclick="add()">ADD</button>
+        <button onclick="sub()">SUB</button>
+    </div>
+ 
+    <div class="border"></div>
+
+    <!-- -------------------------calculator-------------------------------- -->
+
+    <form action="" id="call">
+
+        <h1 style="color: white;">Calculator</h1>
+        <input type="text" class="cal" disabled  name="cal"  >
+        <br> 
+
+        <input type="button" value="1" name="One" onclick="call.cal.value +='1'">
+        <input type="button" value="2" name="Two" onclick="call.cal.value +='2'">
+        <input type="button" value="3" name="Three" onclick="call.cal.value +='3'">
+        <input type="button" value="4" name="Four" onclick="call.cal.value +='4'">
+
+        <br>
+
+        <input type="button" value="5" name="Five" onclick="call.cal.value +='5'">
+        <input type="button" value="6" name="Six" onclick="call.cal.value +='6'">
+        <input type="button" value="7" name="Seven" onclick="call.cal.value +='7'">
+        <input type="button" value="8" name="Eight" onclick="call.cal.value +='8'">
+
+        <br>
+
+        <input type="button" value="9" name="Nine" onclick="call.cal.value +='9'">
+        <input type="button" value="0" name="Zero" onclick="call.cal.value +='0'">
+
+
+        <input type="button" value="+" name="plus" onclick="call.cal.value += '+'">
+        <input type="button" value="-" name="min" onclick=" call.cal.value += '-' ">
+        <br>
+        <input type="button" value="C" name="none" onclick="call.cal.value = '' ">
+
+        <input type="button" value="=" name="eq" onclick="call.cal.value  =
+        eval(call.cal.value) ">
+
+    </form>
+
+    <!-- ------------------------------fan-------------------------------------- -->
+
+
+    <div class="main">
+        <img src="./fan2.jpg" height="auto" width="30%" alt="">  
+      </div>
+      <div class="main_2">
+          <button onclick="OFF()" id="btn" style="padding: 0px;">OFF</button>
+          <button onclick="ON()" id="btn_1"style="padding: 0px;">ON</button>
+          <button onclick="speed()" id="btn_2"style="padding: 0px;">1</button>
+          <button onclick="speed_2()" id="btn_3"style="padding: 0px;">2</button>
+      </div>
+
+
+
+
+    <script>
+// -----------------darkmode---------------------
+
+var dark = document.querySelector("body");
+
+function ab(){
+    dark.classList.toggle('h1')
+}
+
+// ----------------------counter--------------------
+
+var bb = document.getElementById('number');
+        let num = 0;
+        
+        function add(){
+            num+=1;
+            bb.innerHTML = num
+        };
+ 
+        function sub(){
+            num-=1;
+            bb.innerHTML = num
+        };
+//  ------------------------fan-------------------------------
+
+
+
+
+   
+        let fan = document.querySelector("img")
+        var btn = document.querySelector('#btn');
+        var btn = document.querySelector('#btn_1');
+
+        // FAN off
+        function OFF(){
+            fan.classList.remove("start_fan");
+            fan.classList.remove("fast_fan");
+            fan.classList.remove("faster_fan");
+        }
+
+        // Fan on
+        function ON(){
+            fan.classList.add("start_fan")
+            fan.classList.remove("fast_fan")
+            fan.classList.remove("faster_fan")
+        }
+
+        // 1 speed
+        function speed(){
+            fan.classList.add("fast_fan")
+            fan.classList.remove("start_fan")
+            fan.classList.remove("faster_fan")
+        }
+
+        // 2nd speed
+        function speed_2(){
+            fan.classList.add("faster_fan")
+            fan.classList.remove("fast_fan")
+            fan.classList.remove("start_fan")
+        }
+        
+        
+
+
+
+   
+
+
+    </script>
+</body>
+</html>
